@@ -37,7 +37,7 @@ scanf("%s", &codigo1); //Utilize a função scanf para capturar as entradas do u
 printf("Digite o nome da cidade (ex: Fortaleza): "); //Digite conforme o exemplo dentro do parênteses
 scanf("%s", &cidade1); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
-printf("Digite a população (ex:50000 (cinquenta mil): "); //Digite conforme o exemplo dentro do parênteses
+printf("Digite a população (ex:50000) cinquenta mil: "); //Digite conforme o exemplo dentro do parênteses
 scanf("%d", &populacao1); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 printf("Digite a área (ex: 1521.11) km²: "); //Digite conforme o exemplo dentro do parênteses
@@ -63,7 +63,7 @@ scanf("%s", &codigo2); //Utilize a função scanf para capturar as entradas do u
 printf("Digite o nome da cidade (ex: Recife): "); //Digite conforme o exemplo dentro do parênteses
 scanf("%s", &cidade2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
-printf("Digite a população (ex: (200000) duzentos mil: "); //Digite conforme o exemplo dentro do parênteses
+printf("Digite a população (ex: 200000) duzentos mil: "); //Digite conforme o exemplo dentro do parênteses
 scanf("%d", &populacao2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 printf("Digite a área (ex: 5500.00 km²): "); //Digite conforme o exemplo dentro do parênteses
@@ -82,7 +82,7 @@ printf("\nSuper trunfo - Carta 1: \n");
 printf("Estado: %s\n", estado1);
 printf("Código: %s\n", codigo1);
 printf("Cidade: %s\n", cidade1);
-printf("População: %d\n", populacao1);
+printf("População: %d habitantes\n", populacao1);
 printf("Área: %.2f km²\n", area1);
 printf("Pib: %.2f milhões de reais\n", pib1);
 printf("Pontos turísticos: %d\n", pontosTuristicos1);
@@ -91,7 +91,7 @@ printf("\nSuper trunfo - Carta 2: \n");
 printf("Estado: %s\n", estado2);
 printf("Código: %s\n", codigo2);
 printf("Cidade: %s\n", cidade2);
-printf("População: %d\n", populacao2);
+printf("População: %d habitantes\n", populacao2);
 printf("Área: %.2f km²\n", area2);
 printf("Pib: %.2f milhões de reais\n", pib2);
 printf("Pontos turísticos: %d\n", pontosTuristicos2);

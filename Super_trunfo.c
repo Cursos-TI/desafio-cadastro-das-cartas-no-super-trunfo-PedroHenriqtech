@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 //Desafio super trunfo - Países 
+// Tema 1 - Cadastro das Cartas
 
 int main (){
 char carta[50];
@@ -19,7 +20,10 @@ float pib2;
 int pontosTuristicos1;
 int pontosTuristicos2;
 
+//Siga os comentários para implementar cada parte do desafio.
 //Informações da carta 1
+
+//Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
 
 printf("Super Trunfo - Países \n");
 printf("Carta 1: \n");
@@ -72,6 +76,7 @@ printf("Digite os números de pontos turísticos (ex: 15): "); //Digite conforme
 scanf("%d", &pontosTuristicos2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 //Imprimindo as cartas 1 e 2
+// Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
 
 printf("\nSuper trunfo - Carta 1: \n");
 printf("Estado: %s\n", estado1);

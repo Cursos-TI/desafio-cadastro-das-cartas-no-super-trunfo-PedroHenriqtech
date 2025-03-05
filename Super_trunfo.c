@@ -11,8 +11,8 @@ char estado1[2];
 char estado2[2];
 char codigo1[50];
 char codigo2[50];
-int populacao1;
-int populacao2;
+unsigned long int populacao1;
+unsigned long int populacao2;
 float area1;
 float area2;
 float pib1;
@@ -39,7 +39,7 @@ printf("Digite o nome da cidade (ex: Manaus): "); //Digite conforme o exemplo de
 scanf("%s", &cidade1); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 printf("Digite a população (ex:50000) cinquenta mil: "); //Digite conforme o exemplo dentro do parênteses
-scanf("%d", &populacao1); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
+scanf("%lu", &populacao1); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 printf("Digite a área (ex: 1521.11) km²: "); //Digite conforme o exemplo dentro do parênteses
 scanf("%f", &area1); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -65,7 +65,7 @@ printf("Digite o nome da cidade (ex: Fortaleza): "); //Digite conforme o exemplo
 scanf("%s", &cidade2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 printf("Digite a população (ex: 400000) quatrocentos mil: "); //Digite conforme o exemplo dentro do parênteses, ou seja, somente números
-scanf("%d", &populacao2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
+scanf("%lu", &populacao2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
 printf("Digite a área (ex: 5500.00) km²: "); //Digite conforme o exemplo dentro do parênteses
 scanf("%f", &area2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -76,10 +76,12 @@ scanf("%f", &pib2); //Utilize a função scanf para capturar as entradas do usu�
 printf("Digite os números de pontos turísticos (ex: 15): "); //Digite conforme o exemplo dentro do parênteses
 scanf("%d", &pontosTuristicos2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
-double pibPercapita1 = pib1 / populacao1;
-double pibPercapita2 = pib2 / populacao2;  
-float densidadePopulacional1 = populacao1 / area1;
-float densidadePopulacional2 = populacao2 / area2;
+double pibPercapita1 = (float) pib1 / populacao1;
+double pibPercapita2 = (float) pib2 / populacao2;  
+float densidadePopulacional1 = (float) populacao1 / area1;
+float densidadePopulacional2 = (float) populacao2 / area2;
+float superPoder1 = (float) populacao1 + area1 + pib1 + pontosTuristicos1 + pibPercapita1 - densidadePopulacional1;
+float superPoder2 = (float) populacao2 + area2 + pib2 + pontosTuristicos2 + pibPercapita2 - densidadePopulacional2;
 
 
 //Imprimindo carta 1 
@@ -89,12 +91,13 @@ printf("\nSuper trunfo - Carta 1: \n");
 printf("Estado: %s\n", estado1);
 printf("Código: %s\n", codigo1);
 printf("Cidade: %s\n", cidade1);
-printf("População: %d habitantes\n", populacao1);
+printf("População: %lu habitantes\n", populacao1);
 printf("Área: %.2f km²\n", area1);
 printf("Pib: %.2f bilhões de reais\n", pib1);
 printf("Pontos turísticos: %d\n", pontosTuristicos1);
 printf("PIB per Capita: %.2f reais\n", pibPercapita1);
 printf("Densidade populacional: %.2f hab/km²\n" , densidadePopulacional1);
+printf("Super poder: %.2f\n", superPoder1);
 
 //imprimindo carta 2
 // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -103,12 +106,25 @@ printf("\nSuper trunfo - Carta 2: \n");
 printf("Estado: %s\n", estado2);
 printf("Código: %s\n", codigo2);
 printf("Cidade: %s\n", cidade2);
-printf("População: %d habitantes\n", populacao2);
+printf("População: %lu habitantes\n", populacao2);
 printf("Área: %.2f km²\n", area2);
 printf("Pib: %.2f bilhões de reais\n", pib2);
 printf("Pontos turísticos: %d\n", pontosTuristicos2);
 printf("PIB per Capita: %.2f reais\n", pibPercapita2);
 printf("Densidade populacional: %.2f hab/km²\n" , densidadePopulacional2);
+printf("Super poder: %.2f\n", superPoder2);
+
+// imprimindo atributos vencedores
+printf("\nComparação de cartas: \n");
+
+printf("População: %s (%d)\n", populacao1 > populacao2 ? "Carta 1 venceu" : "Carta 2 venceu", populacao1 > populacao2 ? 1 : 0);
+printf("Área: %s (%d)\n", area1 > area2 ? "Carta 1 venceu" : "Carta 2 venceu", area1 > area2 ? 1 : 0);
+printf("PIB: %s (%d)\n", pib1 > pib2 ? "Carta 1 venceu" : "Carta 2 venceu", pib1 > pib2 ? 1 : 0);
+printf("Pontos turísticos: %s (%d)\n", pontosTuristicos1 > pontosTuristicos2 ? "Carta 1 venceu" : "Carta 2 venceu", pontosTuristicos1 > pontosTuristicos2 ? 1 : 0);
+printf("PIB per capita: %s (%d)\n", pibPercapita1 > pibPercapita2 ? "Carta 1 venceu" : "Carta 2 venceu", pibPercapita1 > pibPercapita2 ? 1 : 0);
+printf("Densidade populacional: %s (%d)\n", densidadePopulacional1 < densidadePopulacional2? "Carta 1 venceu" : "Carta 2 venceu", densidadePopulacional1 < densidadePopulacional2 ? 1 : 0);
+printf("Super poder: %s (%d)\n", superPoder1 > superPoder2? "Carta 1 venceu" : "Carta 2 venceu", superPoder1 > superPoder2 ? 1 : 0);
+
 
 return 0;
 }

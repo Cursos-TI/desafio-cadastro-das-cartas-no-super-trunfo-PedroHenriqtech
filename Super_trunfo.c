@@ -76,8 +76,8 @@ scanf("%f", &pib2); //Utilize a função scanf para capturar as entradas do usu�
 printf("Digite os números de pontos turísticos (ex: 15): "); //Digite conforme o exemplo dentro do parênteses
 scanf("%d", &pontosTuristicos2); //Utilize a função scanf para capturar as entradas do usuário para cada atributo.
 
-double pibPercapita1 = (float) pib1 / populacao1;
-double pibPercapita2 = (float) pib2 / populacao2;  
+float pibPercapita1 = (float) pib1 / populacao1;
+float pibPercapita2 = (float) pib2 / populacao2;  
 float densidadePopulacional1 = (float) populacao1 / area1;
 float densidadePopulacional2 = (float) populacao2 / area2;
 

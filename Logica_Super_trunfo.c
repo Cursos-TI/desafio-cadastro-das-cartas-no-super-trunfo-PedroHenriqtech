@@ -110,5 +110,48 @@ printf("Pontos turísticos: %d\n", pontosTuristicos2);
 printf("Densidade populacional: %.2f hab/km²\n" , densidadePopulacional2);
 printf("PIB per Capita: %.2f reais\n", pibPercapita2);
 
+
+//Comparação das cartas
+
+printf("\nComparação de cartas - (Área). \n");
+printf("Resultado: \n");
+if(area1 > area2) {
+    printf("Carta 1 (%s) venceu !\n", estado1);
+} else {
+    printf("Carta 2 (%s) venceu !\n", estado2);
+}
+
+printf("\nComparação de cartas - (PIB). \n");
+printf("Resultado: \n");
+if(pib1 > pib2) {
+    printf("Carta 1 (%s) venceu !\n", estado1);
+} else {
+    printf("Carta 2 (%s) venceu !\n", estado2);
+}
+
+printf("\nComparação de cartas - (Pontos Turísticos). \n");
+printf("Resultado: \n");
+if(pontosTuristicos1 > pontosTuristicos2) {
+    printf("Carta 1 (%s) venceu !\n", estado1);
+} else {
+    printf("Carta 2 (%s) venceu !\n", estado2);
+}
+
+printf("\nComparação de cartas - (Densidade Populacional). \n");
+printf("Resultado: \n");
+if(densidadePopulacional1 < densidadePopulacional2) {
+    printf("Carta 2 (%s) venceu !\n", estado2);
+} else {
+    printf("Carta 1 (%s) venceu !\n", estado1);
+}
+
+printf("\nComparação de cartas - (PIB per capita). \n");
+printf("Resultado: \n");
+if(pibPercapita1 > pibPercapita2) {
+    printf("Carta 1 (%s) venceu !\n", estado1);
+} else {
+    printf("Carta 2 (%s) venceu !\n", estado2);
+} 
+
 return 0;
 }
